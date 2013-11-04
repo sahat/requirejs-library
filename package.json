@@ -9,7 +9,7 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-requirejs": "*",
-    "grunt-contrib-jasmine": "*",
+    "grunt-contrib-uglify": "*",
     "requirejs": "*"
   }
 }

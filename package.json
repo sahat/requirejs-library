@@ -1,15 +1,9 @@
 {
   "name": "requirejs-library",
-  "version": "0.1.0",
-  "dependencies": {
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
+  "version": "0.1.1",
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-requirejs": "*",
-    "grunt-contrib-uglify": "*",
-    "requirejs": "*"
+    "grunt-contrib-uglify": "*"
   }
 }

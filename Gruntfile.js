@@ -7,14 +7,15 @@ module.exports = function(grunt) {
         options: {
           baseUrl: "src",
           name: '../vendor/almond',
-          optimize: 'none',
           include: ['skeleton'],
+          out: "dist/skeleton.js",
           wrap: {
-            startFile: 'src/start.frag',
-            endFile: 'src/end.frag'
+            startFile: 'src/wrapStart.js',
+            endFile: 'src/wrapEnd.js'
           },
           // build file destination, relative to the build file itself
-          out: "dist/skeleton.js",
+
+          optimize: 'none',
           preserveLicenseComments: false
         }
       }
@@ -30,10 +31,8 @@ module.exports = function(grunt) {
 
   });
 
-  // Grunt tasks.
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // When running the default Grunt command, just lint the code.
   grunt.registerTask('default', ['requirejs', 'uglify']);
 };

@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      options: {
+      release: {
         files: {
           "dist/skeleton.min.js": "dist/skeleton.js"
         }

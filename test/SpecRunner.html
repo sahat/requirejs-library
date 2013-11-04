@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+  <link rel="stylesheet" href="../vendor/jasmine/jasmine.css">
+  <script src="../vendor/jasmine/jasmine.js"></script>
+  <script src="../vendor/jasmine/jasmine-html.js"></script>
+   <script>
+      var require = {
+        paths: {
+          'skeleton': '../src/skeleton'
+        }
+      }
+  </script>
+  <script src="../vendor/require.js"></script>
+  <script type="text/javascript">
+    require([
+    'spec/skeleton',
+    'spec/module',
+    'spec/feature'
+    ], function() {
+      var jasmineEnv = jasmine.getEnv();
+      var htmlReporter = new jasmine.HtmlReporter();
+      jasmineEnv.updateInterval = 1000;
+      jasmineEnv.addReporter(htmlReporter);
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+      jasmineEnv.execute();
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>

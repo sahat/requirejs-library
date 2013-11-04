@@ -2,8 +2,8 @@
 // https://github.com/jrburke/r.js/blob/master/build/example.build.js
 requirejs.config({
   // all modules loaded are relative to this path
-  // e.g. require(["grid/core"]) would grab /lib/grid/core.js
-  baseUrl: "./lib",
+  // e.g. require(["grid/core"]) would grab /src/grid/core.js
+  baseUrl: "./src",
 
   // specify custom module name paths
   paths: {
@@ -17,7 +17,7 @@ requirejs.config({
 
   optimize: "none",
 
-  // files to include along with almond.  only lib/skeleton.js is defined, as
+  // files to include along with almond.  only src/skeleton.js is defined, as
   // it pulls in the rest of the dependencies automatically.
   include: ["skeleton"],
 

@@ -1,17 +1,14 @@
 {
-  "name": "my-project",
+  "name": "requirejs-library",
   "version": "1.0.0",
-  "main": "path/to/main.css",
-  "ignore": [
-    ".jshintrc",
-    "**/*.txt"
-  ],
+
   "dependencies": {
-    "<name>": "<version>",
-    "<name>": "<folder>",
-    "<name>": "<package>"
+    "lodash": "2.2.1"
   },
+  
   "devDependencies": {
-    "<test-framework-name>": "<version>"
+    "almond": "0.2.6",
+    "requirejs": "2.1.8",
+    "jasmine": "1.3.1",
   }
 }

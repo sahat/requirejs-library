@@ -1,17 +1,4 @@
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        //Allow using this built library as an AMD module
-        //in another project. That other project will only
-        //see this AMD call, not the internal modules in
-        //the closure below.
-        define(factory);
-    } else {
-        //Browser globals case. Just assign the
-        //result to a property on the global.
-        root.skeleton = factory();
-    }
-}(this, function () {
-    //almond, and your modules will be inlined here
+(function () {
 /**
  * almond 0.2.6 Copyright (c) 2011-2012, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
@@ -440,15 +427,15 @@ define('skeleton/module',[],function() {
     method: function() { return 'it does'; }
   };
 });
-define('skeleton',['require','skeleton/core','skeleton/feature','skeleton/module'],function(require) {
-  var skeleton = require('skeleton/core');
-  skeleton.feature = require('skeleton/feature');
-  skeleton.module = require('skeleton/module');
-  return skeleton;
+define('mylib',[
+  './skeleton/core',
+  './skeleton/feature',
+  './skeleton/module'
+], function(skeleton) {
+    console.log('boom')
+// Expose skeleton and $ identifiers globally
+return (window.skeleton = window.$ = skeleton);
+
 });
-    // The modules for your project will be inlined above
-    // this snippet. Ask almond to synchronously require the
-    // module value for 'main' here and return it as the
-    // value to use for the public API for the built file.
-    return require('skeleton');
-}));
+require(["mylib"]);
+}());

@@ -20,9 +20,7 @@
     "indent":    2
   },
 
-  "dependencies": {
-    
-  },
+  "dependencies": {},
 
   "devDependencies": {
     "grunt": "*",

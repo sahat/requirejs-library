@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Demo</title>
-  <script src="../vendor/require.js"></script>
+  <script src="../bower_components/requirejs/require.js"></script>
 </head>
 <body>
 <script>
-require(['../dist/skeleton'],function(skeleton){
+require(['../dist/mylib'],function(skeleton){
   console.log("Look, skeleton's feature is "+skeleton.feature());
 });
 </script>

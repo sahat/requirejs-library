@@ -10,7 +10,7 @@ module.exports = function(grunt) {
           out: "dist/mylib.js",
           // Usually, you would use the name parameter to specify your main module 
           // but we’re using include here because we’re bundling almond.js loader as well
-          include: ['../vendor/almond', 'mylib'],
+          include: ['../bower_components/almond/almond', 'mylib'],
           // Insert require([]) at the end of the built file to trigger module loading
           insertRequire: ['mylib'],
           // Wrap everything into IIFE: (function() { + content + }());

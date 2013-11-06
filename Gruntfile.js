@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
 
     requirejs: {
@@ -7,7 +6,7 @@ module.exports = function(grunt) {
         options: {
           // All paths will be relative to this baseUrl
           baseUrl: "src",
-          // Tells r.js that you want everything in one file.
+          // Tells r.js that you want everything in one file
           out: "dist/mylib.js",
           // Usually, you would use the name parameter to specify your main module 
           // but we’re using include here because we’re bundling almond.js loader as well
@@ -16,8 +15,9 @@ module.exports = function(grunt) {
           insertRequire: ['mylib'],
           // Wrap everything into IIFE: (function() { + content + }());
           wrap: true,
-          
+          // No minification will be done
           optimize: 'none',
+          // Remove license comments from the built file
           preserveLicenseComments: false
         }
       }

@@ -1,7 +1,10 @@
-define(function() {
-  var skeleton = {
-    VERSION: '0.1.5'
+define([], function() {
+  
+  var mylib = {
+    version: '1.0'
   };
 
-  return skeleton;
+  return mylib;
+
 });
+

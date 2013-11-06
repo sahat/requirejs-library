@@ -8,9 +8,14 @@ module.exports = function(grunt) {
           baseUrl: "src",
           // Tells r.js that you want everything in one file
           out: "dist/mylib.js",
+          // Set paths for modules (optional, just less typing)
+          paths: {
+            almond: '../bower_components/almond/almond',
+            zepto: '../bower_components/zepto/zepto.min'
+          },
           // Usually, you would use the name parameter to specify your main module 
           // but we’re using include here because we’re bundling almond.js loader as well
-          include: ['../bower_components/almond/almond', 'mylib'],
+          include: ['almond', 'mylib'],
           // Insert require([]) at the end of the built file to trigger module loading
           insertRequire: ['mylib'],
           // Wrap everything into IIFE: (function() { + content + }());
@@ -18,7 +23,8 @@ module.exports = function(grunt) {
           // No minification will be done
           optimize: 'none',
           // Remove license comments from the built file
-          preserveLicenseComments: false
+          preserveLicenseComments: false,
+
         }
       }
     },

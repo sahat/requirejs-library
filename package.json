@@ -1,6 +1,29 @@
 {
   "name": "requirejs-library",
-  "version": "0.1.1",
+  "version": "0.0.1",
+  "homepage": "http://github.com/sahat/requirejs-library",
+  "description": "Library skeleton project using require.js",
+
+  "jshintConfig": {
+    "quotmark": "single",
+    "boss":      true,
+    "node":      true,
+    "strict":    true,
+    "white":     true,
+    "smarttabs": true,
+    "undef":     true,
+    "unused":    true,
+    "onecase":   true,
+    "lastsemic": true,
+    "newcap":    false,
+    "maxlen":    100,
+    "indent":    2
+  },
+
+  "dependencies": {
+    
+  },
+
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-requirejs": "*",

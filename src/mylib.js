@@ -1,10 +1,10 @@
 define([
-  './skeleton/core',
-  './skeleton/feature',
-  './skeleton/module'
-], function(skeleton) {
-    console.log('boom')
-// Expose skeleton and $ identifiers globally
-return (window.skeleton = window.$ = skeleton);
+  './core',
+  './module1',
+  './module2'
+], function(mylib) {
+
+  // Expose mylib identifier globally
+  return (window.mylib = mylib);
 
 });

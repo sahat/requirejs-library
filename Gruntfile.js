@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           // Set paths for modules (optional, just less typing)
           paths: {
             almond: '../bower_components/almond/almond',
-            zepto: '../bower_components/zepto/zepto.min'
+            lodash: '../bower_components/lodash/dist/lodash.min'
           },
           // Usually, you would use the name parameter to specify your main module 
           // but we’re using include here because we’re bundling almond.js loader as well

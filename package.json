@@ -1,6 +1,6 @@
 {
   "name": "requirejs-library",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "http://github.com/sahat/requirejs-library",
   "description": "Library skeleton project using require.js",
 

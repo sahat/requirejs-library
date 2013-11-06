@@ -23,8 +23,7 @@ module.exports = function(grunt) {
           // No minification will be done
           optimize: 'none',
           // Remove license comments from the built file
-          preserveLicenseComments: false,
-
+          preserveLicenseComments: false
         }
       }
     },

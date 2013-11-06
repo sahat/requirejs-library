@@ -5,16 +5,18 @@ module.exports = function(grunt) {
     requirejs: {
       compile: {
         options: {
+          // All paths will be relative to this baseUrl
           baseUrl: "src",
-          name: '../vendor/almond',
-          include: ['skeleton'],
-          out: "dist/skeleton.js",
-          wrap: {
-            startFile: 'src/wrapStart.js',
-            endFile: 'src/wrapEnd.js'
-          },
-          // build file destination, relative to the build file itself
-
+          // Tells r.js that you want everything in one file.
+          out: "dist/mylib.js",
+          // Usually, you would use the name parameter to specify your main module 
+          // but we’re using include here because we’re bundling almond.js loader as well
+          include: ['../vendor/almond', 'mylib'],
+          // Insert require([]) at the end of the built file to trigger module loading
+          insertRequire: ['mylib'],
+          // Wrap everything into IIFE: (function() { + content + }());
+          wrap: true,
+          
           optimize: 'none',
           preserveLicenseComments: false
         }
@@ -24,7 +26,7 @@ module.exports = function(grunt) {
     uglify: {
       release: {
         files: {
-          "dist/skeleton.min.js": "dist/skeleton.js"
+          "dist/mylib.min.js": "dist/mylib.js"
         }
       }
     }

@@ -3,12 +3,12 @@
 <head>
   <title>Demo</title>
   <script src="../bower_components/requirejs/require.js"></script>
+  <script>
+    require(['../dist/mylib'],function(mylib){
+      console.log("mylib's feature is "+ mylib.feature);
+    });
+  </script>
 </head>
 <body>
-<script>
-require(['../dist/mylib'],function(skeleton){
-  console.log("Look, skeleton's feature is "+skeleton.feature());
-});
-</script>
 </body>
 </html>

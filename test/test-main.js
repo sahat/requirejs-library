@@ -1,6 +1,5 @@
 var tests = [];
 for (var file in window.__karma__.files) {
-  console.log(file);
   if (/spec\//.test(file)) {
     tests.push(file);
   }

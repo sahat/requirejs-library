@@ -18,8 +18,11 @@ module.exports = function(grunt) {
           include: ['almond', 'mylib'],
           // Insert require([]) at the end of the built file to trigger module loading
           insertRequire: ['mylib'],
-          // Wrap everything into IIFE: (function() { + content + }());
-          wrap: true,
+          // Makes the library AMD-compliant using AMD module wrapper
+          wrap: {
+            startFile: 'src/start.frag',
+            endFile: 'src/end.frag'
+          },
           // No minification will be done
           optimize: 'none',
           // Remove license comments from the built file

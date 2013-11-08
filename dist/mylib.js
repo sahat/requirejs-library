@@ -485,7 +485,7 @@ if(typeof t!="number"&&null!=t){var o=u;for(t=Y.createCallback(t,e,3);o--&&t(n[o
 Y.prototype[n]=function(){return new nt(t.apply(this.__wrapped__,arguments),this.__chain__)}}),Y}var h,g=[],y=[],m=0,_=+new Date+"",b=75,d=40,w=" \t\x0B\f\xa0\ufeff\n\r\u2028\u2029\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000",j=/\b__p\+='';/g,k=/\b(__p\+=)''\+/g,x=/(__e\(.*?\)|\b__t\))\+'';/g,C=/\$\{([^\\}]*(?:\\.[^\\}]*)*)\}/g,O=/\w*$/,I=/^function[ \n\r\t]+\w/,N=/<%=([\s\S]+?)%>/g,E=RegExp("^["+w+"]*0+(?=.$)"),S=/($^)/,R=/\bthis\b/,A=/['\n\r\t\u2028\u2029\\]/g,D="Array Boolean Date Function Math Number Object RegExp String _ attachEvent clearTimeout isFinite isNaN parseInt setImmediate setTimeout".split(" "),B="[object Arguments]",$="[object Array]",F="[object Boolean]",T="[object Date]",W="[object Function]",q="[object Number]",z="[object Object]",P="[object RegExp]",K="[object String]",L={};
 L[W]=!1,L[B]=L[$]=L[F]=L[T]=L[q]=L[z]=L[P]=L[K]=!0;var M={leading:!1,maxWait:0,trailing:!1},U={configurable:!1,enumerable:!1,value:null,writable:!1},V={"boolean":!1,"function":!0,object:!0,number:!1,string:!1,undefined:!1},G={"\\":"\\","'":"'","\n":"n","\r":"r","\t":"t","\u2028":"u2028","\u2029":"u2029"},H=V[typeof window]&&window||this,J=V[typeof exports]&&exports&&!exports.nodeType&&exports,Q=V[typeof module]&&module&&!module.nodeType&&module,X=Q&&Q.exports===J&&J,Y=V[typeof global]&&global;!Y||Y.global!==Y&&Y.window!==Y||(H=Y);
 var Z=v();typeof define=="function"&&typeof define.amd=="object"&&define.amd?(H._=Z, define('lodash',[],function(){return Z})):J&&Q?X?(Q.exports=Z)._=Z:J._=Z:H._=Z}).call(this);
-define('module1',['./core', 'lodash'], function(mylib, _) {
+define('module1',['core', 'lodash'], function(mylib, _) {
   
   _.extend(mylib, { feature: 'Custom feature' });
 
@@ -494,7 +494,7 @@ define('module1',['./core', 'lodash'], function(mylib, _) {
 });
 
 
-define('module2',['./core', 'lodash'], function(mylib, _) {
+define('module2',['core', 'lodash'], function(mylib, _) {
   
   _.extend(mylib, { 
     method: function() { 
@@ -508,9 +508,9 @@ define('module2',['./core', 'lodash'], function(mylib, _) {
 
 
 define('mylib',[
-  './core',
-  './module1',
-  './module2'
+  'core',
+  'module1',
+  'module2'
 ], function(mylib) {
 
   // Expose mylib identifier globally

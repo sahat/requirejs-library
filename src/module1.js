@@ -1,4 +1,4 @@
-define(['./core', 'lodash'], function(mylib, _) {
+define(['core', 'lodash'], function(mylib, _) {
   
   _.extend(mylib, { feature: 'Custom feature' });
 

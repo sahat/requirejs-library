@@ -1,12 +1,10 @@
-(function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(factory);
-  } else {
-    //Browser globals case. Just assign the
-    //result to a property on the global.
-    root.mylib = factory();
-  }
-}(this, function () {
+(function(root, factory) {
+if (typeof define === 'function' && define.amd) {
+define(factory);
+} else {
+root.mylib = factory();
+}
+} (this, function () {
 /**
  * almond 0.2.6 Copyright (c) 2011-2012, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
@@ -513,10 +511,10 @@ define('mylib',[
   'module2'
 ], function(mylib) {
 
-  // Expose mylib identifier globally
-  return (window.mylib = mylib);
+  console.log('Library module has been loaded successfully.');
 
+  return mylib;
 });
 require(["mylib"]);
-  return require('mylib');
+return require('mylib');
 }));

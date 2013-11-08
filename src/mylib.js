@@ -4,7 +4,7 @@ define([
   'module2'
 ], function(mylib) {
 
-  // Expose mylib identifier globally
-  return (window.mylib = mylib);
+  console.log('Library module has been loaded successfully.');
 
+  return mylib;
 });

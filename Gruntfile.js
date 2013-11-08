@@ -20,8 +20,19 @@ module.exports = function(grunt) {
           insertRequire: ['mylib'],
           // Makes the library AMD-compliant using AMD module wrapper
           wrap: {
-            startFile: 'src/start.frag',
-            endFile: 'src/end.frag'
+            start: ["(function(root, factory) {",
+                      "if (typeof define === 'function' && define.amd) {",
+                        "define(factory);",
+                      "} else {",
+                        // Browser globals. Change mylib to the name
+                        // that you would like make globally available
+                        "root.mylib = factory();",
+                      "}",
+                    "} (this, function () {"].join('\n'),
+                  // Change mylib to the same name as you have in
+                  // include and insertRequire above
+            end: ["return require('mylib');",
+                  "}));"].join('\n')
           },
           // No minification will be done
           optimize: 'none',

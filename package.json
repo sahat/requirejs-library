@@ -24,7 +24,6 @@
 
   "devDependencies": {
     "grunt": "*",
-    "grunt-contrib-requirejs": "*",
-    "grunt-contrib-uglify": "*"
+    "grunt-contrib-requirejs": "*"
   }
 }

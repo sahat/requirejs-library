@@ -28,6 +28,7 @@
     "karma": "*",
     "grunt": "*",
     "grunt-contrib-requirejs": "*",
-    "grunt-contrib-uglify": "*"
+    "grunt-contrib-uglify": "*",
+    "jshint": "2.3.x"
   }
 }

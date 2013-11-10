@@ -6,6 +6,5 @@ define([
 
   console.log('Library module has been loaded successfully.');
 
-  console.log(mylib);
   return mylib;
 });

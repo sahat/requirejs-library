@@ -18,19 +18,10 @@ module.exports = function(grunt) {
           include: ['almond', 'mylib'],
           // Insert require() at the end of the built file to trigger module loading
           insertRequire: ['mylib'],
-          // Makes the library AMD-compliant using AMD module wrapper
+          // Adds compatibility for AMD, CommonJS and Browser globals
           wrap: {
-            start: ["(function(window, factory) {",
-                      "if (typeof define === 'function' && define.amd) {",
-                        "define(factory);",
-                      "} else {",
-                        "window.mylib = factory();",
-                      "}",
-                    "} (this, function () {"].join('\n'),
-                  // Change mylib to the same name as you have in
-                  // include and insertRequire above
-            end: ["return require('mylib');",
-                  "}));"].join('\n')
+            startFile: 'src/_start.js',
+            endFile: 'src/_end.js'
           },
           // No minification will be done
           optimize: 'uglify2',
@@ -40,7 +31,7 @@ module.exports = function(grunt) {
           generateSourceMaps: true
         }
       }
-    },
+    }
 
   });
 

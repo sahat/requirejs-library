@@ -11,22 +11,20 @@ module.exports = function(grunt) {
           // Set paths for modules (optional, just less typing)
           paths: {
             almond: '../bower_components/almond/almond',
-            lodash: '../bower_components/lodash/dist/lodash.min'
+            lodash: '../bower_components/lodash/dist/lodash'
           },
-          // Usually, you would use the name parameter to specify your main module 
-          // but we’re using include here because we’re bundling almond.js loader as well
+          // This lines tells r.js to include "almond" and "mylib" into the final file
+          // specified in out property above
           include: ['almond', 'mylib'],
-          // Insert require([]) at the end of the built file to trigger module loading
+          // Insert require() at the end of the built file to trigger module loading
           insertRequire: ['mylib'],
           // Makes the library AMD-compliant using AMD module wrapper
           wrap: {
-            start: ["(function(root, factory) {",
+            start: ["(function(window, factory) {",
                       "if (typeof define === 'function' && define.amd) {",
                         "define(factory);",
                       "} else {",
-                        // Browser globals. Change mylib to the name
-                        // that you would like make globally available
-                        "root.mylib = factory();",
+                        "window.mylib = factory();",
                       "}",
                     "} (this, function () {"].join('\n'),
                   // Change mylib to the same name as you have in
@@ -35,25 +33,17 @@ module.exports = function(grunt) {
                   "}));"].join('\n')
           },
           // No minification will be done
-          optimize: 'none',
-          // Remove license comments from the built file
-          preserveLicenseComments: false
+          optimize: 'uglify2',
+          // Remove Comments
+          preserveLicenseComments: false,
+          // Add source maps to the original modules
+          generateSourceMaps: true
         }
       }
     },
 
-    uglify: {
-      release: {
-        files: {
-          "dist/mylib.min.js": "dist/mylib.js"
-        }
-      }
-    }
-
   });
 
   grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  grunt.registerTask('default', ['requirejs', 'uglify']);
+  grunt.registerTask('default', ['requirejs']);
 };

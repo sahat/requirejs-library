@@ -1,10 +1,10 @@
 define(['core', 'lodash'], function(mylib, _) {
   
-  _.extend(mylib, { 
-    method: function() { 
-      return 'Custom method';
-    } 
-  });
+  mylib.method = function() {
+    return 'Custom method';
+  }
+
+  console.log(_);
 
   return mylib;
 

@@ -1,6 +1,6 @@
-define(['core', 'lodash'], function(mylib, _) {
+define(['core'], function(mylib) {
   
-  _.extend(mylib, { feature: 'Custom feature' });
+  mylib.feature = 'Custom feature';
 
   return mylib;
 

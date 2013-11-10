@@ -11,7 +11,15 @@ module.exports = function(config) {
 
       'test/test-main.js'
     ],
-    // List of frameworks you want to use: jasmine, mocha, qunit
+    // Exclude Mocha specs so that Jasmine does not try run them,
+    // And by default it will since file pattern above matches ALL *.js files
+    // in test/spec folder
+    // In production pick one testing framework and delete specs
+    // and spec runner for other frameworks
+    exclude: ['test/spec/person.js'],
+    // List of frameworks you want to use: jasmine, mocha
+    // This library skeleton already comes with mocha and jasmine specs
+    // Just swap jasmine for mocha below and you are all set
     frameworks: ['jasmine', 'requirejs'],
     // Enable or disable watching files and executing the tests
     // whenever one of these files changes.
@@ -23,7 +31,7 @@ module.exports = function(config) {
     // Opera (requires karma-opera-launcher plugin)
     // Internet Explorer (requires karma-ie-launcher plugin)
     // Safari (requires karma-safari-launcher plugin)
-    browsers: ['Firefox'],
+    browsers: ['PhantomJS'],
     // If singleRun is set to true, Karma will start and capture all
     // configured browsers, run tests and then exit with an exit code of 0 or 1.
     singleRun: false

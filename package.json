@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "homepage": "http://github.com/sahat/requirejs-library",
   "description": "Library skeleton project using require.js",
-
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+  },
   "jshintConfig": {
     "quotmark": "single",
     "boss":      true,
@@ -23,6 +25,7 @@
   "dependencies": {},
 
   "devDependencies": {
+    "karma": "*",
     "grunt": "*",
     "grunt-contrib-requirejs": "*",
     "grunt-contrib-uglify": "*"

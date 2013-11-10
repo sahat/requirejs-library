@@ -16,8 +16,6 @@ module.exports = function(grunt) {
           // This lines tells r.js to include "almond" and "mylib" into the final file
           // specified in out property above
           include: ['almond', 'mylib'],
-          // Insert require() at the end of the built file to trigger module loading
-          insertRequire: ['mylib'],
           // Adds compatibility for AMD, CommonJS and Browser globals
           wrap: {
             startFile: 'src/_start.js',

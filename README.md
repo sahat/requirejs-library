@@ -77,13 +77,27 @@ Here is the step-by-step guide:
 
 ### Structure
 
-- **demo** - html examples with inline and amd script loading
-- **dist** - final JS files, both minified and unminified, ready for use
-- **src** - *mylib.js* is the entry-file that pulls all other modules
-- **test/spec** -
-- **test**/SpecRunner.html - standalone jasmine html spec runner
-- karma.conf.js — karma test runner configuration
-- **test**/test-main.js — configures karma to use Require.js for the tests
+- **demo** - examples with Inline, AMD, CommonJS script loading
+- **dist** - minified JavaScript file + source map
+- **src**/*mylib.js* - entry-file that pulls all other modules
+- **src**/*_start.js* - adds compatibility for AMD, CommonJS and Browser globals
+- **src**/*_end.js* - serves the same purpose of the initial require() call that data-main does
+- **test/spec** - jasmine and mocha specs
+- **test**/SpecRunnerJasmine.html - standalone jasmine html spec runner
+- **test**/SpecRunnerMocha.html - standalone mocha html spec runner
+- *karma.conf.js* — karma test runner configuration
+- **test**/*test-main.js* — configures karma to use Require.js for the tests
+
+
+### Additional Notes
+
+- I have not tested it with Travis CI but it should work just fine.
+- When you are changing library's name from **mylib** to **YOUR_LIBRARY_NAME**, update names in the following locations:
+ - src/mylib.js: filename
+ - Gruntfile: **out**
+ - Gruntfile: **include**
+ - src/_start.js: **else** statement, `window.YOUR_LIBRARY_NAME = factory();`
+ - src/_end.js: **return** statement, `require('YOUR_LIBRARY_NAME');`
 
 ### Contributing
 If you have any suggestions, or found a bug please open a GitHub issue and I will

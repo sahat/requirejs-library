@@ -9,6 +9,7 @@
      // Configure RequireJS
      var require = {
         baseUrl: '../src',
+       // Prevent RequireJS from Caching Required Scripts
         urlArgs: 'cb=' + Math.random(),
         paths: {
           spec: '../test/spec'
@@ -19,9 +20,7 @@
   <script type="text/javascript">
     // Require test specs here
     require([
-    'spec/mylib',
-    'spec/module1',
-    'spec/module2'
+    'spec/random'
     ], function() {
       var jasmineEnv = jasmine.getEnv();
       var htmlReporter = new jasmine.HtmlReporter();

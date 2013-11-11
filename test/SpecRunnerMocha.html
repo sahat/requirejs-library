@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
+  <title>Mocha Spec Runner</title>
   <link rel="stylesheet" href="../bower_components/mocha/mocha.css">
   <link rel="stylesheet" href="../bower_components/mocha/mocha.js">
   <link rel="stylesheet" href="../bower_components/chai/chai.js">
@@ -9,6 +9,7 @@
     // Configure RequireJS
     var require = {
       baseUrl:'../src/',
+      // Prevent RequireJS from Caching Required Scripts
       urlArgs: 'cb=' + Math.random(),
       paths: {
         chai: '../bower_components/chai/chai',

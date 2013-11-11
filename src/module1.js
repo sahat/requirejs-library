@@ -1,6 +1,10 @@
 define(['core'], function(mylib) {
   
-  mylib.feature = 'Custom feature';
+  mylib.prototype = {
+    feature: 'Custom feature'
+  };
+
+  console.log(mylib);
 
   return mylib;
 

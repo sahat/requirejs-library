@@ -1,21 +1,14 @@
 define([], function() {
-  
-  var mylib = {
-    version: '1.0'
+
+  var _ = function(obj) {
+    if (obj instanceof _) return obj;
+    if (!(this instanceof _)) return new _(obj);
+    this._wrapped = obj;
   };
 
-  mylib.extend = function(obj) {
-    each(slice.call(arguments, 1), function(source) {
-      if (source) {
-        for (var prop in source) {
-          obj[prop] = source[prop];
-        }
-      }
-    });
-    return obj;
-  };
+  _.VERSION = '1.5.2';
 
-  return mylib;
+  return _;
 
 });
 

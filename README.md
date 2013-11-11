@@ -2,12 +2,30 @@ Require.js Library Skeleton
 ===========================
 
 ### Getting Started
-This project depends on [bower](https://github.com/bower/bower) and [grunt-cli](http://gruntjs.com) and Node. 
-They need to be installed globally using npm before you can run the following commands:
+The project depends on [Bower](https://github.com/bower/bower) and [Grunt.js](http://gruntjs.com). Assuming
+you already have **Node.js** installed on your system, run the following command:
+
+```
+sudo npm install -g grunt-cli bower
+```
+
+Next, you need to install project dependencies. 
 ```
 bower install
 npm install
 ```
+
+With [Bower](https://github.com/bower/bower) you get the following libraries:
+- **Almond** - A replacement AMD loader for RequireJS, providing the minimal AMD API footprint.
+- **Require.js**
+- **Jasmine**
+- **Mocha** 
+- **Chai**
+
+And with **Grunt** you get the following packages:
+- **Require.js (r.js)** - Optimization tool that allows you to output a single, minified JavaScript file. 
+- **Karma** - Test runner that lets you run your tests in the terminal with `npm test`.
+- **JSHint** - JavaScript code quality tool.
 
 And then to build a library simply run:
 ```
@@ -20,9 +38,7 @@ by default, but feel free to disable source maps. Refer to [this article](https:
 to enable source maps in Google Chrome, if you haven't already done so.
 ![alt text](https://lh6.googleusercontent.com/-_IhjVi3fN2A/UoB47nFh94I/AAAAAAAADgA/z6LHmjyqvbA/s2560/Screenshot+2013-11-11+01.15.12.png)
 
-With *Bower* you get Almond.js, Require.js, Jasmine BDD framework, and Lodash utility library.
-And with *Grunt* you get Require.js optimization tool that allows you to output
-a single JavaScript file minified or unminified.
+
 
 ### Structure
 

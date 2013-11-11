@@ -22,15 +22,17 @@
   <script>
     require(['require', 'chai', 'mocha'], function(require, chai) {
       // Chai
-      assert = chai.assert;
-      should = chai.should();
-      expect = chai.expect;
+      var assert = chai.assert;
+      var should = chai.should();
+      var expect = chai.expect;
 
       // Mocha
       mocha.setup('bdd');
 
-      // Require base tests before starting
-      require(['spec/person'], function(person){
+      // Require test specs here
+      require([
+        'spec/capitalize'
+      ], function(capitalize){
         // Start runner
         mocha.run();
       });

@@ -8,7 +8,6 @@ for (var file in window.__karma__.files) {
 requirejs.config({
   baseUrl: '/base/src',
   paths: {
-    lodash: '../bower_components/lodash/dist/lodash.min',
     spec: '../test/spec'
   },
   deps: tests,

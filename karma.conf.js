@@ -7,7 +7,6 @@ module.exports = function(config) {
     files: [
       { pattern: 'src/**/*.js', included: false },
       { pattern: 'test/spec/**/*.js', included: false },
-      { pattern: 'bower_components/lodash/dist/lodash.min.js', included: false },
 
       'test/test-main.js'
     ],

@@ -10,8 +10,7 @@ module.exports = function(grunt) {
           out: "dist/mylib.js",
           // Set paths for modules (optional, just less typing)
           paths: {
-            almond: '../bower_components/almond/almond',
-            lodash: '../bower_components/lodash/dist/lodash'
+            almond: '../bower_components/almond/almond'
           },
           // This lines tells r.js to include "almond" and "mylib" into the final file
           // specified in out property above

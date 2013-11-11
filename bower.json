@@ -2,9 +2,7 @@
   "name": "requirejs-library",
   "version": "1.0.0",
 
-  "dependencies": {
-    "lodash": "2.2.1"
-  },
+  "dependencies": {},
 
   "devDependencies": {
     "requirejs": "2.1.8",

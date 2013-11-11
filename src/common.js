@@ -1,5 +1,3 @@
-
-
 define(function() {
 
   function escapeRegExp(str){

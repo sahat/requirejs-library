@@ -29,12 +29,16 @@ And with **Grunt** you get the following packages:
 
 ### Usage
 
+This library is flexible enough to work as an inline **\<script\>** declaration, 
+**Require.js** module, or in this case as a **Node.js** module:
+![alt tex](https://lh4.googleusercontent.com/-fehV2cIkf0Y/UoB4-p2sJ-I/AAAAAAAADgA/HX_vKo0ZFpw/w1360-h954-no/Screenshot+2013-11-11+01.16.41.png)
+
 You can run all demos *out of the box*, but if you have changed any of the **src** files, simply run the
 following command to re-build the library:
 ```
 grunt
 ```
-**Note**: In the future, when I add `grunt watch`, I will also add an optional alias `grunt build` that is
+**Note**: In the future, I plan to add `grunt watch`, and possibly add an optional alias `grunt build` that is
 essentially identical to `grunt`, but more explicit.
 
 ### Source Maps
@@ -48,7 +52,8 @@ to enable source maps in Google Chrome, if you haven't already done so.
 Go to the **test** folder and run *SpecRunnerJasmine.html* and you should see the following page:
 ![alt text](https://lh6.googleusercontent.com/-9vlvxT94o0Y/UoB47u0jGQI/AAAAAAAADgA/AOginRb4OZ8/s2560/Screenshot+2013-11-11+01.15.43.png)
 Only 2 out of 3 specs in the **test/spec** folder are written for the Jasmine testing framework: `slugify.js`, `random.js`.
-For your project pick either **Jasmine** or **Mocha + Chai**, whichever one you prefer the most.
+For your project pick either **Jasmine** or **Mocha + Chai**, whichever one you prefer the most. Both testing frameworks
+are excellent.
 
 The other file, `capitalize.js` is written for the Mocha testing framework, using Chai's *should* assertions. 
 Run the *SpecRunnerMocha.html* and you should see the following page:

@@ -29,7 +29,7 @@ And with **Grunt** you get the following packages:
 
 ### Usage
 
-You can run demos *out of the box*, but if you have changed any of the **src** files, simply run the
+You can run all demos *out of the box*, but if you have changed any of the **src** files, simply run the
 following command to re-build the library:
 ```
 grunt
@@ -43,6 +43,30 @@ Require.js optimizer comes with a built-in support to generate source maps. It i
 by default, but feel free to disable source maps. Refer to [this article](https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#source-maps)
 to enable source maps in Google Chrome, if you haven't already done so.
 ![alt text](https://lh6.googleusercontent.com/-_IhjVi3fN2A/UoB47nFh94I/AAAAAAAADgA/z6LHmjyqvbA/s2560/Screenshot+2013-11-11+01.15.12.png)
+
+### Tests
+Go to the **test** folder and run *SpecRunnerJasmine.html* and you should see the following page:
+![alt text](https://lh6.googleusercontent.com/-9vlvxT94o0Y/UoB47u0jGQI/AAAAAAAADgA/AOginRb4OZ8/s2560/Screenshot+2013-11-11+01.15.43.png)
+Only 2 out of 3 specs in the **test/spec** folder are written for the Jasmine testing framework: `slugify.js`, `random.js`.
+For your project pick either **Jasmine** or **Mocha + Chai**, whichever one you prefer the most.
+
+The other file, `capitalize.js` is written for the Mocha testing framework, using Chai's *should* assertions. 
+Run the *SpecRunnerMocha.html* and you should see the following page:
+![alt text](https://lh6.googleusercontent.com/-asAAIpVt_eI/UoB47vwV8ZI/AAAAAAAADgA/NT2Nu1bf1DU/w1238-h984-no/Screenshot+2013-11-11+01.15.55.png)
+
+And lastly, if you prefer to run your tests with **Karma**, simply run:
+```
+npm test
+```
+
+Or if you have installed **Karma** globally via npm, first run `karma server`, then `karma run`. It will perform
+a single test run using **Jasmine** testing framework via **PhantomJS** headless browser. Both testing framework
+and browser are configurable in **karma.conf.js**. 
+
+I have set `autoWatch: false` by default.
+So, if you use something like *JetBrains WebStorm 7* you want `autoWatch` to be turned off. 
+Here is the step-by-step guide: 
+[Running JavaScript tests with Karma in WebStorm 7](http://blog.jetbrains.com/webstorm/2013/10/running-javascript-tests-with-karma-in-webstorm-7/)
 
 
 

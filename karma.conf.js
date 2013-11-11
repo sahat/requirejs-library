@@ -15,10 +15,13 @@ module.exports = function(config) {
     // in test/spec folder
     // In production pick one testing framework and delete specs
     // and spec runner for other frameworks
-    exclude: ['test/spec/person.js'],
-    // List of frameworks you want to use: jasmine, mocha
+    exclude: ['test/spec/capitalize.js'],
+    // List of frameworks you want to use: jasmine, mocha, qunit
     // This library skeleton already comes with mocha and jasmine specs
-    // Just swap jasmine for mocha below and you are all set
+    // Just swap jasmine for mocha below, then remove capitalize.js
+    // from exclude: [], instead add random.js and slugify.js
+    // the exclude array because those are Jasmine specs
+    // CURRENTLY KARMA SUPPORTS ONLY ONE TESTING FRAMEWORK AT A TIME
     frameworks: ['jasmine', 'requirejs'],
     // Enable or disable watching files and executing the tests
     // whenever one of these files changes.

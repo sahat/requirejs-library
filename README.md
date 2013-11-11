@@ -27,12 +27,18 @@ And with **Grunt** you get the following packages:
 - **Karma** - Test runner that lets you run your tests in the terminal with `npm test`.
 - **JSHint** - JavaScript code quality tool.
 
-And then to build a library simply run:
+### Usage
+
+You can run demos *out of the box*, but if you have changed any of the **src** files, simply run the
+following command to re-build the library:
 ```
 grunt
 ```
+**Note**: In the future, when I add `grunt watch`, I will also add an optional alias `grunt build` that is
+essentially identical to `grunt`, but more explicit.
 
 ### Source Maps
+
 Require.js optimizer comes with a built-in support to generate source maps. It is already enabled in **Gruntfile**
 by default, but feel free to disable source maps. Refer to [this article](https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#source-maps)
 to enable source maps in Google Chrome, if you haven't already done so.

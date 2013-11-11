@@ -7,14 +7,15 @@ define([
   'trim'
 ], function(camelize, capitalize, dasherize, random, slugify, trim) {
 
+  // Object Contructor
   var mylib = function(obj) {
-    if (obj instanceof mylib) return obj;
-    if (!(this instanceof mylib)) return new mylib(obj);
-    this._wrapped = obj;
+    return obj;
   };
 
+  // Properties
   mylib.VERSION = '1.0.0';
 
+  // Methods
   mylib.camelize = camelize;
   mylib.capitalize = capitalize;
   mylib.dasherize = dasherize;

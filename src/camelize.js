@@ -7,6 +7,3 @@ define(['trim'], function(trim) {
   return camelize;
 
 });
-
-
-

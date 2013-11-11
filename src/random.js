@@ -11,6 +11,3 @@ define(function() {
   return random;
 
 });
-
-
-

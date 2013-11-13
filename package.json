@@ -27,11 +27,11 @@
   "dependencies": {},
 
   "devDependencies": {
-    "karma": "*",
-    "karma-mocha": "*",
-    "grunt": "*",
-    "grunt-contrib-requirejs": "*",
-    "grunt-contrib-watch": "*",
+    "karma": "0.10.x",
+    "karma-mocha": "0.1.x",
+    "grunt": "0.4.x",
+    "grunt-contrib-requirejs": "0.4.x",
+    "grunt-contrib-watch": "0.5.x",
     "jshint": "2.3.x"
   }
 }

@@ -9,7 +9,7 @@ you already have **Node.js** installed on your system, run the following command
 sudo npm install -g grunt-cli bower
 ```
 
-Next, you need to install project dependencies. 
+Next, you need to install project dependencies:
 ```
 bower install
 npm install
@@ -17,13 +17,13 @@ npm install
 
 With [Bower](https://github.com/bower/bower) you get the following libraries:
 - **Almond** - A replacement AMD loader for RequireJS, providing the minimal AMD API footprint.
-- **Require.js**
-- **Jasmine**
-- **Mocha** 
-- **Chai**
+- **Require.js** - Module loader.
+- **Jasmine** - Popular BDD testing framework.
+- **Mocha** - Another great testing framework.
+- **Chai** - BDD/TDD assertion library (use with Mocha).
 
 And with **Grunt** you get the following packages:
-- **Require.js (r.js)** - Optimization tool that allows you to output a single, minified JavaScript file. 
+- **r.js** - Optimization tool that allows you to output a single, minified JavaScript file. 
 - **Karma** - Test runner that lets you run your tests in the terminal with `npm test`.
 - **JSHint** - JavaScript code quality tool.
 
@@ -69,7 +69,7 @@ a single test run using **Jasmine** testing framework via **PhantomJS** headless
 and browser are configurable in **karma.conf.js**. 
 
 I have set `autoWatch: false` by default.
-So, if you use something like *JetBrains WebStorm 7* you want `autoWatch` to be turned off. 
+So, if you use something like *JetBrains WebStorm 7* you should keep `autoWatch` turned off. 
 Here is the step-by-step guide: 
 [Running JavaScript tests with Karma in WebStorm 7](http://blog.jetbrains.com/webstorm/2013/10/running-javascript-tests-with-karma-in-webstorm-7/)
 

@@ -31,6 +31,7 @@
     "karma-mocha": "*",
     "grunt": "*",
     "grunt-contrib-requirejs": "*",
+    "grunt-contrib-watch": "*",
     "jshint": "2.3.x"
   }
 }

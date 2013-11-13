@@ -28,10 +28,21 @@ module.exports = function(grunt) {
           generateSourceMaps: true
         }
       }
+    },
+
+    watch: {
+      scripts: {
+        files: ['src/**/*.js'],
+        tasks: ['requirejs'],
+        options: {
+          spawn: false
+        }
+      }
     }
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['requirejs']);
 };

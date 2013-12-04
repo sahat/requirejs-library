@@ -5,8 +5,8 @@
   "dependencies": {},
 
   "devDependencies": {
-    "requirejs": "2.1.8",
-    "almond": "0.2.6",
+    "requirejs": "2.1.9",
+    "almond": "0.2.7",
     "jasmine": "latest",
     "mocha": "latest",
     "chai": "latest"

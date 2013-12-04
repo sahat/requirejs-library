@@ -23,7 +23,7 @@ With [Bower](https://github.com/bower/bower) you get the following libraries:
 - **Chai** - BDD/TDD assertion library (use with Mocha).
 
 And with **Grunt** you get the following packages:
-- **r.js** - Optimization tool that allows you to output a single, minified JavaScript file. 
+- **r.js (Require.js)** - Optimization tool that allows you to output a single, minified JavaScript file. 
 - **Karma** - Test runner that lets you run your tests in the terminal with `npm test`.
 - **JSHint** - JavaScript code quality tool.
 
@@ -33,13 +33,11 @@ This library is flexible enough to work as an inline **\<script\>** declaration,
 **Require.js** module, or in this case as a **Node.js** module:
 ![alt tex](https://lh4.googleusercontent.com/-fehV2cIkf0Y/UoB4-p2sJ-I/AAAAAAAADgA/HX_vKo0ZFpw/w1360-h954-no/Screenshot+2013-11-11+01.16.41.png)
 
-You can run all demos *out of the box*, but if you have changed any of the **src** files, simply run the
+You can run all demos right away *out of the box*, but if you have changed any of the **src** files, simply run the
 following command to re-build the library:
 ```
 grunt
 ```
-**Note**: In the future, I plan to add `grunt watch`, and possibly add an optional alias `grunt build` that is
-essentially identical to `grunt`, but more explicit.
 
 ### Source Maps
 
@@ -69,7 +67,7 @@ a single test run using **Jasmine** testing framework via **PhantomJS** headless
 and browser are configurable in **karma.conf.js**. 
 
 I have set `autoWatch: false` by default.
-So, if you use something like *JetBrains WebStorm 7* you should keep `autoWatch` turned off. 
+So, if you use something like *JetBrains WebStorm 7* for development, then you should keep `autoWatch` turned off. 
 Here is the step-by-step guide: 
 [Running JavaScript tests with Karma in WebStorm 7](http://blog.jetbrains.com/webstorm/2013/10/running-javascript-tests-with-karma-in-webstorm-7/)
 
@@ -93,9 +91,9 @@ Here is the step-by-step guide:
 
 - I have not tested it with Travis CI but it should work just fine.
 - When you are changing library's name from **mylib** to **YOUR_LIBRARY_NAME**, update names in the following locations:
- - src/mylib.js: filename
- - Gruntfile: **out**
- - Gruntfile: **include**
+ - src/mylib.js: **filename**
+ - Gruntfile: **out**, `out: "dist/YOUR_LIBRARY_NAME.js"`
+ - Gruntfile: **include**, `include: ['almond', 'YOUR_LIBRARY_NAME']`
  - src/_start.js: **else** statement, `window.YOUR_LIBRARY_NAME = factory();`
  - src/_end.js: **return** statement, `require('YOUR_LIBRARY_NAME');`
 

@@ -14,7 +14,7 @@ define(['random'], function(random) {
     });
 
     it('should produce a random number greater than or equal to the minimum number', function() {
-      expect(random(min, max)).toBeGreaterThanOrEqualTo(min);
+      expect(random(min, max)).toBeGreaterThanOrEqualTo(max);
     });
 
     it('should produce a random number when passed Number.MAX_VALUE', function() {

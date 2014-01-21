@@ -1,6 +1,6 @@
 define(function() {
 
-  function escapeRegExp(str){
+  function escapeRegExp(str) {
     if (str == null) return '';
     return String(str).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
   }

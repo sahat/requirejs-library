@@ -4,7 +4,7 @@ define(['random'], function(random) {
     var min = Math.pow(2, 31);
     var max = Math.pow(2, 62);
 
-    // Custom Jasmine Matcher
+    // Our own custom Jasmine Matcher
     beforeEach(function() {
       this.addMatchers({
         toBeGreaterThanOrEqualTo: function(expected) {

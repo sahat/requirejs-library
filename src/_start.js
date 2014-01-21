@@ -1,4 +1,4 @@
-(function (window, factory) {
+(function(window, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD
     define(factory);
@@ -6,7 +6,7 @@
     // CommonJS
     module.exports = factory();
   } else {
-    // Browser globals (mylib is your global library identifier)
+    // Browser Global (mylib is your global library identifier)
     window.mylib = factory();
   }
-}(this, function () {
+}(this, function() {

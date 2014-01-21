@@ -1,6 +1,6 @@
-define(['capitalize'],function(capitalize){
+define(['capitalize'], function(capitalize) {
 
-  describe('Capitalize', function(){
+  describe('Capitalize', function() {
     it('should have first letter as upper case', function() {
       capitalize('fabio').should.equal('Fabio');
     });
@@ -13,4 +13,5 @@ define(['capitalize'],function(capitalize){
       capitalize('FOO').should.equal('FOO');
     });
   });
+
 });

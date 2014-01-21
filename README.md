@@ -27,7 +27,7 @@ And with **npm** you get the following packages:
 - **grunt-contrib-watch** - Watches for file changes.
 - **Karma** - Awesome JavaScript test runner.
 
-**Grunt Note:** I may be switching out Grunt.js for [Gulp](https://github.com/gulpjs/gulp) very soon.
+**Note:** I may be switching out Grunt.js for [Gulp](https://github.com/gulpjs/gulp) very soon.
 
 ### Usage
 
@@ -64,7 +64,7 @@ And lastly, if you prefer to run your tests with **Karma**, simply run:
 npm test
 ```
 
-Or if you have installed **Karma** globally via npm, first run `karma server`, then `karma run`. It will perform
+Or if you have installed **Karma** globally via npm, first run `karma start`, then `karma run`. It will perform
 a single test run using **Jasmine** testing framework via **PhantomJS** headless browser. Both testing framework
 and browser are configurable in **karma.conf.js**. 
 

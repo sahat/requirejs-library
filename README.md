@@ -16,15 +16,18 @@ npm install
 
 With [Bower](https://github.com/bower/bower) you get the following libraries:
 - **Almond** - A replacement AMD loader for RequireJS, providing the minimal AMD API footprint.
-- **Require.js** - Module loader.
+- **Require.js** - Asynchronous module loader.
 - **Jasmine** - Popular BDD testing framework.
 - **Mocha** - Another great testing framework.
-- **Chai** - BDD/TDD assertion library (use with Mocha).
+- **Chai** - BDD/TDD assertion library (used with Mocha).
 
-And with **Grunt** you get the following packages:
-- **r.js (Require.js)** - Optimization tool that allows you to output a single, minified JavaScript file. 
-- **Karma** - Test runner that lets you run your tests in the terminal with `npm test`.
-- **JSHint** - JavaScript code quality tool.
+And with **npm** you get the following packages:
+- **Grunt** - JavaScript task runner.
+- **grunt-contrib-requirejs** - Optimization tool that allows you to output a single, minified JavaScript file.
+- **grunt-contrib-watch** - Watches for file changes.
+- **Karma** - Awesome JavaScript test runner.
+
+**Grunt Note:** I may be switching out Grunt.js for [Gulp](https://github.com/gulpjs/gulp) very soon.
 
 ### Usage
 

@@ -1,5 +1,4 @@
-Require.js Library Skeleton
-===========================
+# Require.js Library Skeleton [![Build Status](https://travis-ci.org/sahat/requirejs-library.png?branch=master)](https://travis-ci.org/sahat/requirejs-library)
 
 ### Getting Started
 The project depends on [Bower](https://github.com/bower/bower) and [Grunt.js](http://gruntjs.com). Assuming
@@ -89,7 +88,6 @@ Here is the step-by-step guide:
 
 ### Additional Notes
 
-- I have not tested it with Travis CI but it should work just fine.
 - When you are changing library's name from **mylib** to **YOUR_LIBRARY_NAME**, update names in the following locations:
  - src/mylib.js: **filename**
  - Gruntfile: **out**, `out: "dist/YOUR_LIBRARY_NAME.js"`

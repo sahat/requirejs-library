@@ -1,4 +1,5 @@
-# Require.js Library Skeleton [![Build Status](https://travis-ci.org/sahat/requirejs-library.png?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![devDependency Status](https://david-dm.org/sahat/requirejs-library/dev-status.png?theme=shields.io)](https://david-dm.org/sahat/requirejs-library#info=devDependencies)
+# Require.js Library Skeleton
+[![Build Status](https://travis-ci.org/sahat/requirejs-library.png?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![devDependency Status](https://david-dm.org/sahat/requirejs-library/dev-status.png?theme=shields.io)](https://david-dm.org/sahat/requirejs-library#info=devDependencies)
 ### Getting Started
 The project depends on [Bower](https://github.com/bower/bower) and [Grunt.js](http://gruntjs.com). Assuming
 you already have **Node.js** installed on your system, run the following command:
@@ -7,8 +8,13 @@ you already have **Node.js** installed on your system, run the following command
 sudo npm install -g grunt-cli bower
 ```
 
-Next, you need to install project dependencies:
-```
+Next, clone the repository and install project dependencies:
+```bash
+# Fetch only the latest commits.
+git clone --depth=1 git@github.com:sahat/requirejs-library.git
+
+cd requirejs-library
+
 bower install
 npm install
 ```

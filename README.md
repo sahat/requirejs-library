@@ -1,5 +1,4 @@
-# Require.js Library Skeleton [![Build Status](https://travis-ci.org/sahat/requirejs-library.png?branch=master)](https://travis-ci.org/sahat/requirejs-library)
-
+# Require.js Library Skeleton [![Build Status](https://travis-ci.org/sahat/requirejs-library.png?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![devDependency Status](https://david-dm.org/sahat/requirejs-library/dev-status.png?theme=shields.io)](https://david-dm.org/sahat/requirejs-library#info=devDependencies)
 ### Getting Started
 The project depends on [Bower](https://github.com/bower/bower) and [Grunt.js](http://gruntjs.com). Assuming
 you already have **Node.js** installed on your system, run the following command:
@@ -27,7 +26,7 @@ And with **npm** you get the following packages:
 - **grunt-contrib-watch** - Watches for file changes.
 - **Karma** - Awesome JavaScript test runner.
 
-**Note:** I may be switching out Grunt.js for [Gulp](https://github.com/gulpjs/gulp) very soon.
+> **Note:** I will be switching out Grunt.js for [Gulp](https://github.com/gulpjs/gulp) very soon.
 
 ### Usage
 

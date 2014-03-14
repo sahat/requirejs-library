@@ -1,11 +1,11 @@
 # Require.js Library Skeleton
 [![Build Status](https://travis-ci.org/sahat/requirejs-library.png?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![devDependency Status](https://david-dm.org/sahat/requirejs-library/dev-status.png?theme=shields.io)](https://david-dm.org/sahat/requirejs-library#info=devDependencies)
 ### Getting Started
-The project depends on [Bower](https://github.com/bower/bower) and [Grunt.js](http://gruntjs.com). Assuming
+The project depends on [Bower](https://github.com/bower/bower) and [Gulp.js](http://gulpjs.com). Assuming
 you already have **Node.js** installed on your system, run the following command:
 
 ```
-sudo npm install -g grunt-cli bower
+sudo npm install -g gulp bower
 ```
 
 Next, clone the repository and install project dependencies:
@@ -21,18 +21,16 @@ npm install
 
 With [Bower](https://github.com/bower/bower) you get the following libraries:
 - **Almond** - A replacement AMD loader for RequireJS, providing the minimal AMD API footprint.
-- **Require.js** - Asynchronous module loader.
+- **Require.js** - Used as an asynchronous module loader.
 - **Jasmine** - Popular BDD testing framework.
 - **Mocha** - Another great testing framework.
 - **Chai** - BDD/TDD assertion library (used with Mocha).
 
 And with **npm** you get the following packages:
-- **Grunt** - JavaScript task runner.
-- **grunt-contrib-requirejs** - Optimization tool that allows you to output a single, minified JavaScript file.
-- **grunt-contrib-watch** - Watches for file changes.
+- **Gulp** - Ultra-fast JavaScript task runner.
+- **Require.js** - Used as an optimization tool that lets you to compile a single, minified JavaScript file.
 - **Karma** - Awesome JavaScript test runner.
 
-> **Note:** I will be switching out Grunt.js for [Gulp](https://github.com/gulpjs/gulp) very soon.
 
 ### Usage
 
@@ -41,14 +39,14 @@ This library is flexible enough to work as an inline **\<script\>** declaration,
 ![alt tex](https://lh4.googleusercontent.com/-fehV2cIkf0Y/UoB4-p2sJ-I/AAAAAAAADgA/HX_vKo0ZFpw/w1360-h954-no/Screenshot+2013-11-11+01.16.41.png)
 
 You can run all demos right away *out of the box*, but if you have changed any of the **src** files, simply run the
-following command to re-build the library:
+following command to re-build the library and start watching for changes:
 ```
-grunt
+gulp
 ```
 
 ### Source Maps
 
-Require.js optimizer comes with a built-in support to generate source maps. It is already enabled in **Gruntfile**
+Require.js optimizer comes with a built-in support to generate source maps. It is already enabled in **gulpfile**
 by default, but feel free to disable source maps. Refer to [this article](https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#source-maps)
 to enable source maps in Google Chrome, if you haven't already done so.
 ![alt text](https://lh6.googleusercontent.com/-_IhjVi3fN2A/UoB47nFh94I/AAAAAAAADgA/z6LHmjyqvbA/s2560/Screenshot+2013-11-11+01.15.12.png)
@@ -98,8 +96,8 @@ Here is the step-by-step guide:
 
 - When you are changing library's name from **mylib** to **YOUR_LIBRARY_NAME**, update names in the following locations:
  - src/mylib.js: **filename**
- - Gruntfile: **out**, `out: "dist/YOUR_LIBRARY_NAME.js"`
- - Gruntfile: **include**, `include: ['almond', 'YOUR_LIBRARY_NAME']`
+ - gulpfile.js: **out**, `out: "dist/YOUR_LIBRARY_NAME.js"`
+ - gulpfile.js: **include**, `include: ['almond', 'YOUR_LIBRARY_NAME']`
  - src/_start.js: **else** statement, `window.YOUR_LIBRARY_NAME = factory();`
  - src/_end.js: **return** statement, `require('YOUR_LIBRARY_NAME');`
 

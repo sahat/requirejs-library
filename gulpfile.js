@@ -4,9 +4,9 @@ var rjs = require('requirejs');
 gulp.task('requirejs', function() {
   rjs.optimize({
     // All paths will be relative to this baseUrl.
-    baseUrl: "src",
+    baseUrl: 'src',
     // Tells r.js that you want everything in one file.
-    out: "dist/mylib.js",
+    out: 'dist/mylib.js',
     // Set paths for modules (shortcut alias for "include").
     paths: {
       almond: '../bower_components/almond/almond'

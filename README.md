@@ -1,5 +1,10 @@
 # Require.js Library Skeleton
 [![Build Status](https://travis-ci.org/sahat/requirejs-library.png?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![devDependency Status](https://david-dm.org/sahat/requirejs-library/dev-status.png?theme=shields.io)](https://david-dm.org/sahat/requirejs-library#info=devDependencies)
+
+<img src="http://cache.preserve.io/9qwernji/assets/c6d7109e182d0d88cc312951d3e1d2f8.png" height="138">
+<img src="http://verekia.com/wp-content/uploads/2011/11/require-js.png">
+<img src="http://bower.io/img/bower-logo.png" height="138">
+
 ### Getting Started
 The project depends on [Bower](https://github.com/bower/bower) and [Gulp.js](http://gulpjs.com). Assuming
 you already have **Node.js** installed on your system, run the following command:

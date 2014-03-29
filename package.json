@@ -2,7 +2,7 @@
   "name": "requirejs-library",
   "version": "1.0.0",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    "test": "karma start --single-run --browsers PhantomJS"
   },
   "devDependencies": {
     "gulp": "~3.5.6",

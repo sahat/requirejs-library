@@ -1,5 +1,5 @@
 # Require.js Library Skeleton
-[![Build Status](https://travis-ci.org/sahat/requirejs-library.svg?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![Dependency Status](https://david-dm.org/visionmedia/express.svg?theme=shields.io)](https://david-dm.org/visionmedia/express)
+[![Build Status](https://travis-ci.org/sahat/requirejs-library.svg?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![devDependency Status](https://david-dm.org/sahat/requirejs-library/dev-status.svg?theme=shields.io)](https://david-dm.org/visionmedia/express#info=devDependencies)
 
 <img src="http://cache.preserve.io/9qwernji/assets/c6d7109e182d0d88cc312951d3e1d2f8.png" height="138">
 <img src="http://verekia.com/wp-content/uploads/2011/11/require-js.png">

@@ -5,9 +5,9 @@
     "test": "karma start --single-run --browsers PhantomJS"
   },
   "devDependencies": {
-    "gulp": "~3.7.0",
-    "requirejs": "~2.1.13",
-    "karma": "~0.12.1",
-    "karma-mocha": "~0.1.3"
+    "gulp": "^3.8.0",
+    "requirejs": "^2.1.14",
+    "karma": "^0.12.16",
+    "karma-mocha": "^0.1.3"
   }
 }

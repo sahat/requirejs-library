@@ -1,4 +1,7 @@
 module.exports = function(config) {
+
+  'use strict';
+
   config.set({
     // The root path location that will be used to resolve all relative paths
     // defined in files and exclude
@@ -15,17 +18,17 @@ module.exports = function(config) {
     // in test/spec folder
     // In production pick one testing framework and delete specs
     // and spec runner for other frameworks
-    exclude: ['test/spec/capitalize.js'],
+    exclude: [],
     // List of frameworks you want to use: jasmine, mocha, qunit
     // This library skeleton already comes with mocha and jasmine specs
     // Just swap jasmine for mocha below, then remove capitalize.js
     // from exclude: [], instead add random.js and slugify.js
     // the exclude array because those are Jasmine specs
     // CURRENTLY KARMA SUPPORTS ONLY ONE TESTING FRAMEWORK AT A TIME
-    frameworks: ['jasmine', 'requirejs'],
+    frameworks: ['jasmine', 'requirejs', 'chai'],
     // Enable or disable watching files and executing the tests
     // whenever one of these files changes.
-    autoWatch: false,
+    autoWatch: true,
     // Chrome (comes installed with Karma)
     // ChromeCanary (comes installed with Karma)
     // PhantomJS (comes installed with Karma)
@@ -33,7 +36,7 @@ module.exports = function(config) {
     // Opera (requires karma-opera-launcher plugin)
     // Internet Explorer (requires karma-ie-launcher plugin)
     // Safari (requires karma-safari-launcher plugin)
-    browsers: ['PhantomJS'],
+    browsers: ['PhantomJS', 'Chrome'],
     // If singleRun is set to true, Karma will start and capture all
     // configured browsers, run tests and then exit with an exit code of 0 or 1.
     singleRun: false

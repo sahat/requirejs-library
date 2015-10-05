@@ -1,13 +1,20 @@
 {
   "name": "requirejs-library",
   "version": "1.0.0",
+  "repository": "",
+  "license": "MIT",
   "scripts": {
-    "test": "karma start --single-run --browsers PhantomJS"
+    "test": "karma start --browsers PhantomJS"
   },
   "devDependencies": {
-    "gulp": "^3.8.0",
-    "requirejs": "^2.1.14",
-    "karma": "^0.12.16",
-    "karma-mocha": "^0.1.3"
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-requirejs": "*",
+    "requirejs": "*",
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-requirejs": "*",
+    "karma-chai": "*",
+    "karma-phantomjs-launcher": "*"
   }
 }

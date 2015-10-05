@@ -2,10 +2,9 @@
   "name": "requirejs-library",
   "version": "1.0.0",
   "devDependencies": {
-    "requirejs": "~2.1.10",
-    "almond": "~0.2.9",
-    "jasmine": "~1.3.1",
-    "mocha": "~1.17.0",
-    "chai": "~1.8.1"
+    "requirejs": null,
+    "almond": null,
+    "jasmine": "1.3.1",
+    "chai": null
   }
 }

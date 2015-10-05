@@ -5,7 +5,7 @@ for (var file in window.__karma__.files) {
   }
 }
 
-requirejs.config({
+window.requirejs.config({
   baseUrl: '/base/src',
   paths: {
     spec: '../test/spec'

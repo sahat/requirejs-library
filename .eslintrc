@@ -1,0 +1,18 @@
+{
+  "env" : {
+    "node" : true,
+    "amd" : true,
+    "jquery" : true,
+    "browser" : true,
+    "jasmine": true
+  },
+  "rules" : {
+    "quotes": [1, "single", "avoid-escape"],
+    "rules": {
+        "no-underscore-dangle": false
+    }
+  },
+  "globals": {
+    "assert": true
+  }
+}

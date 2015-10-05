@@ -6,23 +6,31 @@
   <script src="../bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
   <script src="../bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
    <script>
+
      // Configure RequireJS
-     var require = {
+     window.require = {
         baseUrl: '../src',
        // Prevent RequireJS from Caching Required Scripts
         urlArgs: 'cb=' + Math.random(),
         paths: {
-          spec: '../test/spec'
+          spec: '../test/spec',
+          chai: '../bower_components/chai/chai'
         }
       };
+
   </script>
   <script src="../bower_components/requirejs/require.js"></script>
   <script type="text/javascript">
+
     // Require test specs here
     require([
-      'spec/random',
-      'spec/slugify'
-    ], function() {
+      'chai',
+      'spec/test'
+    ], function(chai) {
+
+      'use strict';
+
+      window.assert = chai.assert;
       var jasmineEnv = jasmine.getEnv();
       var htmlReporter = new jasmine.HtmlReporter();
       jasmineEnv.updateInterval = 1000;
@@ -32,6 +40,7 @@
       };
       jasmineEnv.execute();
     });
+
   </script>
 </head>
 <body>

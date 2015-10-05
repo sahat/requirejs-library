@@ -1,5 +1,4 @@
 # Require.js Library Skeleton
-[![Build Status](https://travis-ci.org/sahat/requirejs-library.svg?branch=master)](https://travis-ci.org/sahat/requirejs-library) [![devDependency Status](https://david-dm.org/sahat/requirejs-library/dev-status.svg?theme=shields.io)](https://david-dm.org/sahat/requirejs-library#info=devDependencies)
 
 <img src="https://jordankasper.com/images/grunt-logo.png" height="138">
 <img src="http://verekia.com/wp-content/uploads/2011/11/require-js.png">

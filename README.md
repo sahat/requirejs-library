@@ -27,7 +27,7 @@ With [Bower](https://github.com/bower/bower) you get the following libraries:
 - **Almond** - A replacement AMD loader for RequireJS, providing the minimal AMD API footprint.
 - **Require.js** - Used as an asynchronous module loader.
 - **Jasmine** - Popular BDD testing framework.
-- **Chai** - BDD/TDD assertion library (used with Mocha).
+- **Chai** - BDD/TDD assertion library (used with Jasmine).
 
 And with **npm** you get the following packages:
 - **Grunt** - Ultra-fast JavaScript task runner.
@@ -47,7 +47,7 @@ grunt
 
 ### Source Maps
 
-Require.js optimizer comes with a built-in support to generate source maps. It is already enabled in **gulpfile**
+Require.js optimizer comes with a built-in support to generate source maps. It is already enabled in **gruntfile**
 by default, but feel free to disable source maps. Refer to [this article](https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#source-maps)
 to enable source maps in Google Chrome, if you haven't already done so.
 
@@ -67,9 +67,8 @@ npm test
 - **src**/*mylib.js* - entry-file that pulls all other modules
 - **src**/*_start.js* - adds compatibility for AMD, CommonJS and Browser globals
 - **src**/*_end.js* - serves the same purpose of the initial require() call that data-main does
-- **test/spec** - jasmine and mocha specs
+- **test/spec** - jasmine specs
 - **test**/SpecRunnerJasmine.html - standalone jasmine html spec runner
-- **test**/SpecRunnerMocha.html - standalone mocha html spec runner
 - *karma.conf.js* — karma test runner configuration
 - **test**/*test-main.js* — configures karma to use Require.js for the tests
 
@@ -78,8 +77,8 @@ npm test
 
 - When you are changing library's name from **mylib** to **YOUR_LIBRARY_NAME**, update names in the following locations:
  - src/mylib.js: **filename**
- - gulpfile.js: **out**, `out: "dist/YOUR_LIBRARY_NAME.js"`
- - gulpfile.js: **include**, `include: ['almond', 'YOUR_LIBRARY_NAME']`
+ - gruntfile.js: **out**, `out: "dist/YOUR_LIBRARY_NAME.js"`
+ - gruntfile.js: **include**, `include: ['almond', 'YOUR_LIBRARY_NAME']`
  - src/_start.js: **else** statement, `window.YOUR_LIBRARY_NAME = factory();`
  - src/_end.js: **return** statement, `require('YOUR_LIBRARY_NAME');`
 

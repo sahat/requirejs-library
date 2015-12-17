@@ -1,1 +1,0 @@
-var mylib = require('../dist/mylib');

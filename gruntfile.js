@@ -1,50 +1,40 @@
 module.exports = function(grunt) {
 
-  'use strict';
+  "use strict";
 
   grunt.initConfig({
 
-    requirejs: {
-      compile: {
-        options: {
-          // All paths will be relative to this baseUrl.
-          baseUrl: 'src',
-          // Tells r.js that you want everything in one file.
-          out: 'dist/mylib.js',
-          // Set paths for modules (shortcut alias for 'include').
-          paths: {
-            almond: '../bower_components/almond/almond'
-          },
-          // Include 'almond' and 'mylib' into the final file
-          // specified in 'out' property.
-          include: ['almond', 'mylib'],
-          // Wrapper for AMD, CommonJS and Browser compatibility.
-          wrap: {
-            startFile: 'src/_start.js',
-            endFile: 'src/_end.js'
-          },
-          // Minify the file.
-          optimize: 'uglify2',
-          // Strip comments.
-          preserveLicenseComments: false,
-          // Add source maps for the original modules.
-          generateSourceMaps: true
-        }
+    pkg: grunt.file.readJSON("package.json"),
+
+    browserify: {
+     dist: {
+      options: {
+       paths: ["./src", "./test/spec"],
+       transform: [
+        ["babelify", { presets: "es2015" }]
+       ],
+       browserifyOptions: {
+         standalone: "<%= pkg.name %>"
+       }
+      },
+      files: {
+         "dist/<%= pkg.name %>.js": ["./src/<%= pkg.name %>.js"]
       }
+     }
     },
 
     watch: {
-      scripts: {
-        files: ['src/**/*.js'],
-        tasks: ['requirejs']
-      }
+     scripts: {
+      files: ["src/**/*.js"],
+      tasks: ["browserify"]
+     }
     }
-
   });
 
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+   grunt.loadNpmTasks("grunt-browserify");
+   grunt.loadNpmTasks("grunt-contrib-watch");
 
-  grunt.registerTask('default', ['requirejs', 'watch']);
+   grunt.registerTask("default", ["watch"]);
+   grunt.registerTask("build", ["browserify"]);
 
 };

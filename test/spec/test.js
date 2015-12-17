@@ -1,11 +1,5 @@
-define(function() {
-
-  'use strict';
-
-  describe('add', function () {
-    it('should add', function() {
-      assert.equal(1 + 1, 2);
+describe("Addition", function () {
+    it("1 + 1 should equals 2", () => {
+        assert.equal(1 + 1, 2);
     });
-  });
-
 });

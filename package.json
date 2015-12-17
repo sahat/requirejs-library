@@ -1,13 +1,22 @@
 {
-  "name": "requirejs-library",
+  "name": "myapp",
   "version": "1.0.0",
+  "repository": "",
+  "license": "MIT",
   "scripts": {
-    "test": "karma start --single-run --browsers PhantomJS"
+    "test": "karma start"
   },
   "devDependencies": {
-    "gulp": "^3.8.0",
-    "requirejs": "^2.1.14",
-    "karma": "^0.12.16",
-    "karma-mocha": "^0.1.3"
+    "grunt": "*",
+    "grunt-browserify": "*",
+    "grunt-contrib-watch": "*",
+    "karma": "^0.13.0",
+    "karma-browserify": "^4.2.0",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-chai": "*",
+    "babelify": "*",
+    "babel-preset-es2015": "*",
+    "karma-babel-preprocessor": "*"
   }
 }
